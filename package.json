@@ -5,7 +5,7 @@
         {
             "type": "service",
             "name": "ftp",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "instanceId": "dedicated"
         }
     ],
