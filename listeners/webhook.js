@@ -7,7 +7,7 @@ listeners.defaultWebhookFtp = {
     type: 'service',
     options: {
         service: 'ftp',
-        event: 'webhook',
+        event: 'newFile',
         matching: {
             path: '/ftp',
         }
