@@ -159,11 +159,6 @@
             "type": "script",
             "namespace": "functions",
             "path": "/scripts/functions.js"
-        },
-        {
-            "type": "listener",
-            "namespace": "webhook",
-            "path": "/listeners/webhook.js"
         }
     ]
 }
