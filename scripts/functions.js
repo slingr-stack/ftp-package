@@ -149,6 +149,7 @@ function checkValue (options, idKey) {
  ****************************************************/
 
 let Ftp = function (options) {
-    // We don't need to process nothing here
+    options = options || {};
+    options.config = config.get();
     return options;
 }
