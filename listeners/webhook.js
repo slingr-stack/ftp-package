@@ -2,25 +2,22 @@
  Listeners
  ****************************************************/
 
-listeners.defaultWebhookSkeleton = {
-    label: 'Catch HTTP skeleton events',
+listeners.defaultWebhookFtp = {
+    label: 'Catch FTP skeleton events',
     type: 'service',
     options: {
-        service: 'http',
+        service: 'ftp',
         event: 'webhook',
         matching: {
-            path: '/skeleton',
+            path: '/ftp',
         }
     },
     callback: function(event) {
-        sys.logs.info('Received Skeleton webhook. Processing and triggering a package event.');
-        var body = JSON.stringify(event.data.body);
-        var params = event.data.parameters;
-        if(true) {
+        sys.logs.info('Received FTP webhook. Processing and triggering a package event.');
+        if(event) {
             sys.logs.info('Valid webhook received. Triggering event.');
-            sys.events.triggerEvent('skeleton:webhook', {
-                body: body,
-                params: params
+            sys.events.triggerEvent('ftp:webhook', {
+                event: event
             });
             return "ok";
         }
