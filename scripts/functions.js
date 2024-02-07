@@ -150,6 +150,6 @@ function checkValue (options, idKey) {
 
 let Ftp = function (options) {
     options = options || {};
-    options.config = config.get();
+    //options.config = config.get();
     return options;
 }
